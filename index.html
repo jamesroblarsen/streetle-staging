@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <!-- fm:head -->
+  <title>[STAGING] Streetle · Name the city from its streets</title>
+  <meta name="description" content="Each day, an unlabelled 3D model of part of a real city. Read its street plan and buildings, then the clues each wrong guess reveals, and name it in six guesses.">
+  <meta name="author" content="James Larsen">
+  <meta name="theme-color" content="#12233a">
+  <link rel="canonical" href="https://fourthmeridiangames.com/streetle/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fourth Meridian Games">
+  <meta property="og:title" content="Streetle · Name the city from its streets">
+  <meta property="og:description" content="Each day, an unlabelled 3D model of part of a real city. Read its street plan and buildings, then the clues each wrong guess reveals, and name it in six guesses.">
+  <meta property="og:url" content="https://fourthmeridiangames.com/streetle/">
+  <meta property="og:image" content="https://fourthmeridiangames.com/streetle/og.png?v=1">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Streetle: a street plan drawn in cream on navy, with a brass pin where the guess lands">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Streetle · Name the city from its streets">
+  <meta name="twitter:description" content="Each day, an unlabelled 3D model of part of a real city. Read its street plan and buildings, then the clues each wrong guess reveals, and name it in six guesses.">
+  <meta name="twitter:image" content="https://fourthmeridiangames.com/streetle/og.png?v=1">
+  <meta name="twitter:image:alt" content="Streetle: a street plan drawn in cream on navy, with a brass pin where the guess lands">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- /fm:head -->
+  <!-- fm:kit -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Streetle","alternateName":"Streetle: Name the city from its streets","url":"https://fourthmeridiangames.com/streetle/","description":"Each day, an unlabelled 3D model of part of a real city. Read its street plan and buildings, then the clues each wrong guess reveals, and name it in six guesses.","image":"https://fourthmeridiangames.com/streetle/og.png?v=1","genre":["Daily","Geography","Cities"],"gamePlatform":"Web browser","applicationCategory":"Game","operatingSystem":"Any","inLanguage":"en","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"James Larsen"},"publisher":{"@type":"Organization","name":"Fourth Meridian Games","url":"https://fourthmeridiangames.com/","email":"contact@fourthmeridiangames.com"},"isPartOf":{"@type":"WebSite","name":"Fourth Meridian Games","url":"https://fourthmeridiangames.com/"},"subjectOf":{"@type":"WebPage","name":"How to play Streetle","url":"https://fourthmeridiangames.com/games/streetle/"}}</script>
+  <style>.fm-more{box-sizing:border-box;max-width:560px;margin:24px auto;padding:16px 18px;background:#0b1828;border:1px solid rgba(212,169,67,.35);color:#fbf6ec;font:15px/1.4 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;text-align:left}.fm-more-title{margin:0 0 10px;color:#d4a943;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}.fm-more-list{margin:0;padding:0;list-style:none}.fm-more-list li{border-top:1px solid rgba(251,246,236,.12)}.fm-more-list a{display:flex;flex-wrap:wrap;gap:2px 12px;align-items:baseline;padding:9px 0;color:#fbf6ec;text-decoration:none}.fm-more-list a:hover strong,.fm-more-list a:focus-visible strong{color:#d4a943}.fm-more-list strong{font:600 20px/1.1 "Cormorant Garamond",Georgia,serif;letter-spacing:.02em}.fm-more-list span{color:#a9b4c2;font-size:14px}.fm-more-all{display:inline-block;margin-top:8px;color:#d4a943;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none}.fm-more-all:hover{text-decoration:underline}</style>
+  <script>
+    (function () {
+      if (location.hostname !== 'fourthmeridiangames.com') return;
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = '/kit/more.js';
+      document.head.appendChild(s);
+    })();
+  </script>
+  <!-- /fm:kit -->
+  <link rel="stylesheet" href="assets/maplibre-gl.576b085fdd.css">
+  <link rel="stylesheet" href="assets/style.350fbfcc9f.css">
+  <script>
+    (function () {
+      if (location.hostname !== 'fourthmeridiangames.com' || /-staging\//.test(location.pathname) || navigator.webdriver) return;
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+      s.setAttribute('data-cf-beacon', '{"token": "ee646f7d364542db8e29edfc21db0a1f"}');
+      document.head.appendChild(s);
+    })();
+  </script>
+</head>
+<body>
+  <header class="top">
+    <button class="icon" id="helpBtn" aria-label="How to play">?</button>
+    <div class="brand">
+      <h1>Streetle</h1>
+      <p class="sub" id="sub">Guess the city from its street plan</p>
+    </div>
+    <button class="icon" id="statsBtn" aria-label="Statistics">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 17V10M8 17V5M13 17V8M18 17V2" stroke="currentColor" stroke-width="2.2" fill="none"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="sheet">
+      <div class="mapwrap" id="mapwrap">
+        <div id="map" role="img" aria-label="Unlabelled 3D map of today's city"></div>
+        <button class="recenter" id="recenter" type="button" aria-label="Reset view" title="Reset view">⟲</button>
+        <div class="loading" id="loading">Unfolding the map…</div>
+      </div>
+      <div class="stagebar">
+        <ol class="dots" id="dots" aria-hidden="true"></ol>
+        <span id="stageLabel"></span>
+      </div>
+      <ul class="hints" id="hints"></ul>
+    </section>
+
+    <form class="guess" id="guessForm" autocomplete="off">
+      <div class="combo">
+        <input id="guessInput" type="text" placeholder="Type a city or a country…" aria-label="City" aria-autocomplete="list" aria-controls="suggest" spellcheck="false" autocapitalize="words">
+        <ul id="suggest" class="suggest" role="listbox" hidden></ul>
+      </div>
+      <button type="submit" id="guessBtn">Guess</button>
+    </form>
+
+    <ol class="guesses" id="guesses" reversed></ol>
+
+    <section class="result" id="result" hidden>
+      <p class="verdict" id="verdict"></p>
+      <h2 id="answerName"></h2>
+      <p class="pattern" id="answerPattern"></p>
+      <p class="note" id="answerNote"></p>
+      <div class="actions">
+        <button id="shareBtn" class="primary">Share result</button>
+        <button id="practiceBtn" hidden>Play an earlier map</button>
+      </div>
+      <p class="next" id="nextIn"></p>
+    </section>
+
+    <!-- Everyone's results for the day, Trendle-style: totals from the pulse counter, drawn by game.js. -->
+    <section class="crowd" id="crowd" hidden aria-labelledby="crowdTitle">
+      <h2 class="kicker" id="crowdTitle">Where you stand today</h2>
+      <div class="crowd-headline">
+        <p class="crowd-rank" id="crowdRank"></p>
+        <p class="crowd-sub" id="crowdSub"></p>
+      </div>
+      <div class="crowd-nums" id="crowdNums"></div>
+      <figure class="crowd-chart" id="crowdChart"></figure>
+    </section>
+
+    <!-- fm:more -->
+    <aside class="fm-more" data-fm-more="streetle" aria-label="More from Fourth Meridian">
+      <p class="fm-more-title">More from Fourth Meridian</p>
+      <ul class="fm-more-list">
+        <li><a href="https://fourthmeridiangames.com/trendle/?from=streetle"><strong>Trendle</strong><span>Draw the rest of history.</span></a></li>
+        <li><a href="https://fourthmeridiangames.com/diplomacy-school-play/?from=streetle"><strong>Diplomacy School</strong><span>Learn the board game Diplomacy.</span></a></li>
+      </ul>
+      <a class="fm-more-all" href="https://fourthmeridiangames.com/?from=streetle">All games<span aria-hidden="true"> →</span></a>
+    </aside>
+    <!-- /fm:more -->
+  </main>
+
+  <footer>
+    Map data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, via <a href="https://openmaptiles.org/" target="_blank" rel="noopener">© OpenMapTiles</a> and <a href="https://openfreemap.org/" target="_blank" rel="noopener">OpenFreeMap</a>. Rendered with <a href="https://maplibre.org/" target="_blank" rel="noopener">MapLibre</a>.
+    City list: <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a>.
+    <br>Your games and stats stay in this browser. Visits and finished games are counted in totals only, with no cookies or IDs, and each day's totals are shown after you finish (see Privacy).
+    <br><a href="https://fourthmeridiangames.com/games/streetle/">How to play</a> · <a href="https://fourthmeridiangames.com/privacy/#streetle">Privacy</a> · <a href="https://fourthmeridiangames.com/terms/">Terms</a> · <a href="https://fourthmeridiangames.com/">Fourth Meridian Games</a>
+  </footer>
+
+  <dialog id="help">
+    <h2>How to play</h2>
+    <p>Each day there's a new city, shown as an unlabelled 3D model: a small piece of it, chosen to show how the city was planned or how it grew. Drag with two fingers (or the right mouse button) to tilt and turn it.</p>
+    <p>You have <b>six guesses</b>. After each wrong guess the model gives a little more away:</p>
+    <ol>
+      <li>The street plan and buildings at their real heights, 800 m across</li>
+      <li>A wider view, 1 km across</li>
+      <li>1.3 km, with the places where people drink coloured on the model</li>
+      <li>2 km, with places of worship by faith</li>
+      <li>Zoomed right out to 4 km, the model in the middle of the streets around it, with a kind of place picked for that city and a few local street names</li>
+      <li>10 km: the whole layout of the city, its rivers, coast and roads, plus the country, when the city was founded and how it ranks there by size: pick one of its cities</li>
+    </ol>
+    <p>The first kind of place is always where people drink (pubs and bars against cafés), the second is always places of worship by faith, and the third is whichever kind of place says most about that city: sports grounds, bazaars, eating out, embassies, old walls, shops and more. Tap a legend to choose which kind is coloured.</p>
+    <p>For your first four guesses you only learn whether your city shares the answer's hemisphere, continent, side of the road, main faith and street-sign script. Distance and direction appear from guess 5, but a guess that matches all five gets the direction arrow straight away, and two in a row get the distance too.</p>
+    <p>Not sure of the name? Type a country to see all of its cities, biggest first.</p>
+    <p>Look at the grain of the streets: grids and their angles, ring roads where walls stood, medieval tangles, diagonals cut through blocks, courtyards, towers, block sizes.</p>
+    <button class="primary" data-close>Start</button>
+  </dialog>
+
+  <dialog id="stats">
+    <h2>Statistics</h2>
+    <div class="nums" id="nums"></div>
+    <h3>Guess distribution</h3>
+    <div class="dist" id="dist"></div>
+    <button data-close>Close</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/maplibre-gl.d01ffd5aef.js"></script>
+  <script type="module" src="assets/game.64704b13ba.js"></script>
+</body>
+</html>
